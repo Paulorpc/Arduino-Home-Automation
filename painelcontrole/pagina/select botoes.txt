@@ -1,0 +1,37 @@
+// PRIMEIRO SELECT POR AGRUPADO POR LOCAL
+
+SELECT a.*
+FROM ar_status2 AS a
+INNER JOIN (
+
+SELECT local, MAX( id ) AS id FROM ar_status2
+WHERE ambiente = 'sala' and local <> 0
+GROUP BY LOCAL) AS b 
+ON ( a.local = b.local AND a.id = b.id ) 
+WHERE a.local <> 0
+
+
+
+// SEGUNDO SELECT AGRUPADO POR LOCAL, MOSTRANDO OS NOMES DOS DISPOSITIVOS
+
+SELECT temp.id AS id, a.nome AS ambiente, d.nome AS dispositivo, l.nome AS local_nome, temp.local AS local_id, temp.status AS 
+STATUS FROM (
+
+SELECT a . * 
+FROM ar_status2 AS a
+INNER JOIN (
+
+	SELECT dispositivo, local, MAX( id ) AS id
+	FROM ar_status2
+	WHERE ambiente = 3 
+	AND local <> 0
+	GROUP BY dispositivo, local
+	) AS b 
+ON ( a.local = b.local AND a.id = b.id ) 
+WHERE a.local <>0
+
+) temp,  `ar_ambiente` a,  `ar_dispositivos` d,  `ar_local` l
+
+WHERE ( temp.ambiente = a.id AND temp.dispositivo = d.id AND temp.local = l.id )
+
+
