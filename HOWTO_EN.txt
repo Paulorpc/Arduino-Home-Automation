@@ -87,9 +87,12 @@ In this document I'm gonna explain step-to-step how to isntall and setup this Ho
 	There is some special configuration that you must change to allow network computers to acess your page because 
 	it is not allowed by default in Wampp. Indeed, you also need to enable some modules as you can see below.
 	
-	3. Open your browser in the VM and type: "http://localhost" or "http://127.0.0.1" (without the quotes)
-		Considerations: It should open the wamp default page and that means it's everything ok but, if you got
-				any error, then check the wamp instalation or the "c:\wamp\www" folder.
+
+	3. Open your browser in the VM and test both 2 URLs: "http://localhost" and "http://phpmyadmin"
+		
+		Considerations: It should open the wamp default homepage (c:/wamp/www) and the mysql databases's admin page. 
+				If you got any error, then check the wamp instalation.
+
 
 	[APPACHE CONFIGURATION: httpd.config]
 	4. To allow network devices to access the Controle Panel you must change the file "httpd.config" 
@@ -124,7 +127,16 @@ In this document I'm gonna explain step-to-step how to isntall and setup this Ho
 PART 2: CONTROL PANEL (WEBPAGE)
 ----------------------------------------------------------------------------------------------------------------------
 	
-	1. Once the webserver is working fine and you can access wampserver default page copy the folder 
+	Once tested the webserver and it is fine, then we can begin this section. First of all, lets create the 
+	data base.
+	
+	1. Access the phpmyadmin page in your browser typing the URL: "http://phpmyadmin/".
+	
+	2. 
+	
+	. copy the folder "PAINELCONTROLE" to the wamp's root homepage folder, by default: "c:\wamp\www"
+	
+	. Access the page again, but now you have to 
 
 
 
