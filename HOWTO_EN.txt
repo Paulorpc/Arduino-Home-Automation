@@ -63,6 +63,14 @@ In this document I'm gonna explain step-to-step how to isntall and setup this Ho
 
 		Considerations: If your router is configured as DHCP, your VM will receive an network IP automaticaly
 				but, it's better assign a static IP to avoid comunications issues in the nearly future.
+				
+	5. Set the IP of your VM's network card:
+		IP Adress:	192.168.0.2
+		Subnet mask:	255.255.255.0
+		Gateway:	192.168.0.1
+		DNS:		192.168.0.1
+		
+	6. Set the VM's computer name to "SERVER"
 
 
 ----------------------------------------------------------------------------------------------------------------------
@@ -76,11 +84,15 @@ In this document I'm gonna explain step-to-step how to isntall and setup this Ho
 		Considerations: The easiest and most well-know webservices software that includes Apache, PHP and MySQL 
 				I think it's Wampserver and Xampp. If you are in trouble with Wampserver try Xampp.
 	
-	There is some special configuration that you must change to allow network computers to acess your page because it is
-	not allowed by default in Wampp. Indeed, you also need to enable some modules as you can see below.
+	There is some special configuration that you must change to allow network computers to acess your page because 
+	it is not allowed by default in Wampp. Indeed, you also need to enable some modules as you can see below.
+	
+	3. Open your browser in the VM and type: "http://localhost" or "http://127.0.0.1" (without the quotes)
+		Considerations: It should open the wamp default page and that means it's everything ok but, if you got
+				any error, then check the wamp instalation or the "c:\wamp\www" folder.
 
 	[APPACHE CONFIGURATION: httpd.config]
-	3. To allow network devices to access the Controle Panel you must change the file "httpd.config" 
+	4. To allow network devices to access the Controle Panel you must change the file "httpd.config" 
 
 		<Directory "c:/wamp/www">
 		    Options Indexes FollowSymLinks
@@ -97,17 +109,22 @@ In this document I'm gonna explain step-to-step how to isntall and setup this Ho
 		     Allow from localhost
 		</Directory>
 
-	4. Enable "rewrite_module" 
+	5. Enable "rewrite_module" 
 		Considerations: Necessary to manipulate permanent links if used wordpress
 
 	[PHP EXTENSION: php.ini]
-	4. Enable "php_sockets" 
+	6. Enable "php_sockets" 
 		Considerations: Enable PHP socket comunication's feature - Used for Arduino comunication.
+		
+	7.  Now on your should be able to access your webserver from any computer in your network, you can test it
+	    typing "http://computer-name-of-your-vm" or "http://vm-ip-adress". 
+	    Ex: "http://server" or "http://192.168.0.2"
 
 ----------------------------------------------------------------------------------------------------------------------
 PART 2: CONTROL PANEL (WEBPAGE)
 ----------------------------------------------------------------------------------------------------------------------
-
+	
+	1. Once the webserver is working fine and you can access wampserver default page copy the folder 
 
 
 
