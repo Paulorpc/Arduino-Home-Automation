@@ -88,7 +88,7 @@ In this document I'm gonna explain step-to-step how to isntall and setup this Ho
 	it is not allowed by default in Wampp. Indeed, you also need to enable some modules as you can see below.
 	
 
-	3. Open your browser in the VM and test both 2 URLs: "http://localhost" and "http://phpmyadmin"
+	3. Open your browser in the VM and test both 2 URLs: "http://localhost/" and "http://localhost/phpmyadmin/"
 		
 		Considerations: It should open the wamp default homepage (c:/wamp/www) and the mysql databases's admin page. 
 				If you got any error, then check the wamp instalation.
@@ -130,13 +130,19 @@ PART 2: CONTROL PANEL (WEBPAGE)
 	Once tested the webserver and it is fine, then we can begin this section. First of all, lets create the 
 	data base.
 	
-	1. Access the phpmyadmin page in your browser typing the URL: "http://phpmyadmin/".
+	1. Access the phpmyadmin page in your browser typing the URL: "http://localhost/phpmyadmin/".
 	
-	2. 
+	2. in the horizontal menu, click in SQL
 	
-	. copy the folder "PAINELCONTROLE" to the wamp's root homepage folder, by default: "c:\wamp\www"
+	3. Open the file "arduino-db.sql" located into the project's root folder.
 	
-	. Access the page again, but now you have to 
+	4. Copy/paste the content in the text area and click in Go button.
+	
+		Considerations: The database is created, run a select query to verify.
+		
+	Now, it's time to configure the Controle Panel
+	
+	5. 
 
 
 
