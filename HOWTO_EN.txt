@@ -5,15 +5,19 @@ In this document I'm gonna explain step-to-step how to isntall and setup this Ho
 >> INTRODUCTION: SOFTWARE AND HARDWARE ESPECIFICATIONS
 ----------------------------------------------------------------------------------------------------------------------
 
-	1. Router:		D-link DIR-600					[http://www.dlink.com.br/]
-	2. Arduino:		Arduino Uno					[https://www.arduino.cc/]
-	3. Virtual Machine: 	Oracle VM VirtualBox 	[Version 4.3.14]	[https://www.virtualbox.org/]
-	4. Operate System: 	Microsoft Windows 7 	[Version 6.1.7601]
-	5. Webserver software: 	Wampp Server		[Version 2.4]		[http://www.wampserver.com/]
-		Apache					[Version 2.4.4]
-		PHP					[Version 5.4.16]
-		MySQL					[Version 5.6.12]
-	6. Dynamic DNS:		No-IP DUC		[Version 4.0.1]		[http://www.noip.com/]
+	1. Router:			D-link DIR-600					[http://www.dlink.com.br/]
+	2. Arduino:			Arduino Uno					[https://www.arduino.cc/]
+	3. Virtual Machine: 		Oracle VM VirtualBox 	[Version 4.3.14]	[https://www.virtualbox.org/]
+	4. Operate System: 		Microsoft Windows 7 	[Version 6.1.7601]
+	5. Webserver software: 		Wampp Server		[Version 2.4]		[http://www.wampserver.com/]
+		Apache						[Version 2.4.4]
+		PHP						[Version 5.4.16]
+		MySQL						[Version 5.6.12]
+	6. Dynamic DNS:			No-IP DUC		[Version 4.0.1]		[http://www.noip.com/]
+	7. Programming Languages: 	
+		Arduino:		C
+		Painel Controle		PHP, html, css
+		Database		MySQL
 
 
 ----------------------------------------------------------------------------------------------------------------------
