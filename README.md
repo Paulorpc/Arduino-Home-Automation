@@ -12,3 +12,5 @@ The main objective of this projetc is to present a home automation system for en
 - [x] See the "HOWTO_EN.txt" file for step-by-step instructions
 - [ ] Veja o arquivo "HOWTO_PT.txt" para instruções passo-a-passo
 
+#### Note
+The folder "aruino projects" contains another projects with more features but, it needs some maintence once they are not in final version. ;)
